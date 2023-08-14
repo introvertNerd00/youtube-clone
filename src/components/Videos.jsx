@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material';
+import {Box, Stack } from '@mui/material';
 import React from 'react'
 import{VideoCard,ChannelCard} from './';
 
@@ -7,7 +7,7 @@ const Videos = ({videos, direction}) => {
   
   // console.log(videos);
   return (
-    <Stack direction={direction || "row"} flexWrap="wrap" justifyContent="start" gap={2}>
+    <Stack direction={direction || "row"} flexWrap="wrap" justifyContent="start" gap={12}>
       {videos.map((item,idx) => (
         <Box key={idx}>
             {item.id.videoId && <VideoCard video={item}/>}
