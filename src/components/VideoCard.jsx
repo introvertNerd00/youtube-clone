@@ -5,9 +5,9 @@ import { demoThumbnailUrl,demoVideoUrl,demoVideoTitle,demoProfilePicture,demoCha
 
 const VideoCard = ({video:{id:{videoId},snippet}}) => {
   return (
-    <Card sx={{width:{md:'320px', xs:'100%'}, boxShadow:'none', borderRadius:'none'}}>
+    <Card sx={{width:{xs:'100%' , sm:'358px' , md:'320px' }, boxShadow:'none', borderRadius:'none'}}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
-        <CardMedia image={snippet?.thumbnails?.high?.url} alt={snippet?.title} sx={{height:180, width:358}} />
+        <CardMedia image={snippet?.thumbnails?.high?.url} alt={snippet?.title} sx={{height:180, width:{xs:'100%' , sm:'358px' , md:'320px' }}} />
       </Link>
       <CardContent sx={{backgroundColor:'#1e1e1e', height:'106px'}}>
         <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
